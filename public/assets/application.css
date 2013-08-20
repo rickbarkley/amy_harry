@@ -88,9 +88,6 @@ nav img {
 nav {
 	background-image: url("images/nav4.png");
 	margin-top: 15px;
-/*	background-color: white;*/
-/*	padding: 0 0.7em;*/
-/*	white-space: nowrap;*/
 	margin-bottom:20px;
 	width: 950px;
 	box-shadow: 10px 10px 5px #888888;
@@ -152,9 +149,9 @@ a.signup_button {
 	display: block;
 	text-align: center;
 	width: 150px;
-	color: #fff;
+	color: #fff !important;
 	background: #09c;
-	font-size: 130%;
+	font-size: 120%;
 	font-weight: bold;
 	padding: 15px;
 	box-shadow: 10px 10px 5px #888888;
@@ -169,6 +166,7 @@ footer {
 	margin-right: auto;
 	box-shadow: 10px 10px 5px #888888;
 	padding: 10px;
+	font-size: 12px !important;
 }
 
 	/* user show page */

@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130630210447) do
+ActiveRecord::Schema.define(:version => 20130820131000) do
+
+  create_table "controllers", :force => true do |t|
+    t.string   "courses"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "courses", :force => true do |t|
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "title"
+    t.decimal  "cost"
+    t.string   "media_url"
+    t.string   "description"
+  end
+
+  create_table "orders", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.datetime "expiration"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -24,5 +47,13 @@ ActiveRecord::Schema.define(:version => 20130630210447) do
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+
+  create_table "videos", :force => true do |t|
+    t.string   "media_url"
+    t.string   "chapter"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "course_id"
+  end
 
 end

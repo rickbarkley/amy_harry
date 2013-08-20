@@ -1,6 +1,17 @@
 
 NuvolaApp::Application.routes.draw do
   
+  resources :orders
+
+
+    resources :courses do
+        resources :orders
+    end
+
+
+    #resources :controllers
+
+
   get "sessions/new"
 
 resources :users
@@ -14,9 +25,6 @@ match '/contact', :to => 'pages#contact'
 match '/classes', :to => 'pages#classes'
 match '/communities', :to => 'pages#communities'
 match '/trending', :to => 'pages#trending'
-match '/classes/schoolsafety3', :to => 'pages#schoolsafety3'
-match '/classes/schoolsafety1', :to => 'pages#schoolsafety1'
-match '/classes/schoolsafety2', :to => 'pages#schoolsafety2'
 
 
 root :to => 'pages#home'

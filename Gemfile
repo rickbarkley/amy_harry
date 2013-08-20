@@ -10,6 +10,9 @@ gem 'sqlite3'
 gem "gravatar_image_tag"
 # gem "paginate"
 gem "will_paginate"
+gem "nested_form"
+gem 'stripe'
+gem 'sprockets'
 
 group :development do
 gem "rspec-rails"
