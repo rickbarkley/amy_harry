@@ -28,11 +28,13 @@
 
 
 
-<%= link_to "Order This Course", new_course_order_path(@course) %><br /><br />
+<%= link_to "Order This Course", new_course_order_path(@course) %> |
+<%= link_to 'Back', courses_path %>
+<br /><br />
 
 
 <% end %>
 
-
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+<% if current_user.admin? %>
+<%= link_to 'Edit', edit_course_path(@course) %> 
+<% end %>

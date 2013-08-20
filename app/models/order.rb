@@ -21,7 +21,7 @@ class Order < ActiveRecord::Base
     
     def save_with_payment
         
-        @amount = self.course.cost
+        @amount = self.course.cost.to_i
         
         if valid?
             charge = Stripe::Charge.create(amount: @amount, currency: 'usd', card: stripe_card_token)

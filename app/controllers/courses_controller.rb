@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+    before_filter :admin_user,   :only => [:destroy, :create, :edit, :update]
   # GET /courses
   # GET /courses.json
   def index
@@ -84,4 +85,7 @@ class CoursesController < ApplicationController
       format.json { head :no_content }
     end
   end
+    def admin_user
+        redirect_to(root_path) unless current_user.admin?
+        end
 end

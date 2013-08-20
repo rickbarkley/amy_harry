@@ -1,15 +1,16 @@
 <p id="notice"><%= notice %></p>
-
+<p>Click link below to enter your course</p>
 <p>
   <b>Course:</b>
-  <%= @order.course_id %>
+  <%= link_to @order.course.title, course_path %>
 </p>
 
 <p>
   <b>User:</b>
-  <%= @order.user_id %>
+  <%= @order.user.name %>
 </p>
 
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
+<% if current_user.admin? %>
+<%= link_to 'Edit', edit_order_path(@order) %> 
 <%= link_to 'Back', orders_path %>
+<% end %>

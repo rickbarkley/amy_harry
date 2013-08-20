@@ -3,7 +3,7 @@ NuvolaApp::Application.routes.draw do
   
   resources :orders
 
-
+resources :courses
     resources :courses do
         resources :orders
     end

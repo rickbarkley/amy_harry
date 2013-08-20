@@ -14,7 +14,7 @@ menu {
 	top:20px;
 	float: right;
     left: 135px;
-	font-size: 125%;
+	font-size: 90% !important;
 	background-color: #fff;
         padding: 0 0.7em;
         white-space: nowrap;
@@ -112,8 +112,8 @@ nav u1 li {
 /*	background-image: url("images/nav4.png");*/
 	list-style-type: none;
 	display: inline-block;
-	padding: 0.2em 1.1em;
-	font-size: 135%;
+	padding: 0.35em 1.1em;
+	font-size: 115%;
 	font-weight: bold;
 	margin-top: 8px;
 	color: #efefef !important;
@@ -151,7 +151,7 @@ a.signup_button {
 	width: 150px;
 	color: #fff !important;
 	background: #09c;
-	font-size: 120%;
+	font-size: 100%;
 	font-weight: bold;
 	padding: 15px;
 	box-shadow: 10px 10px 5px #888888;
@@ -166,7 +166,7 @@ footer {
 	margin-right: auto;
 	box-shadow: 10px 10px 5px #888888;
 	padding: 10px;
-	font-size: 12px !important;
+	font-size: 80% !important;
 }
 
 	/* user show page */
